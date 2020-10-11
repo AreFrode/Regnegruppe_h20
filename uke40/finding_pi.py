@@ -2,6 +2,7 @@
 
 import numpy as np
 
+
 class NewtonsMethod:
     def __init__(self, x, f, g):
         self.x = x
@@ -10,6 +11,7 @@ class NewtonsMethod:
 
     def step(self):
         self.x -= self.f(self.x) / self.g(self.x)
+
 
 if __name__ == "__main__":
     my_solver = NewtonsMethod(3.14, np.sin, np.cos)
